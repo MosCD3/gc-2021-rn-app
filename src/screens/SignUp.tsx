@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Platform, Image, Button, TouchableOpacity } from "react-native";
 
-const LoginPage = ()=>{
+const SignUpPage = ({navigation}) =>{
+
+
     return (
         <SafeAreaView style={styles.wrapper}>
             <View style={styles.topBox}>
-                    <Text>Login form input fields</Text>
+                    <Text>Sign up form input fields</Text>
             </View>
             <View style={styles.bottomBox}>
                 <TouchableOpacity 
@@ -13,7 +15,14 @@ const LoginPage = ()=>{
                         onPress={()=>{
                             alert('am working')
                         }}>
-                        <Text style={styles.buttonFont}>Login</Text>
+                        <Text style={styles.buttonFont}>Submit</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                        style={styles.buttonStyle}
+                        onPress={()=>{
+                            navigation.goBack()
+                        }}>
+                        <Text style={styles.buttonFont}>Back</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
@@ -31,7 +40,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     bottomBox:{
-        flex:2,
+        flexBasis:70,
+        justifyContent:'flex-end',
         padding:10,
     },
     buttonStyle:{
@@ -45,4 +55,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LoginPage;
+export default SignUpPage;

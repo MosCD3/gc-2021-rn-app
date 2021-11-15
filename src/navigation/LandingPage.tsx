@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Platform, Image, Button, TouchableOpacity } from "react-native";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import SignUpPage from "./SignUp";
-import FlexBoxTry from "./FlexBoxTry";
-import LoginPage from "./LoginPage";
+import SignUpPage from "../screens/SignUp";
+import FlexBoxTry from "../components/FlexBoxTry";
+import LoginPage from "../screens/LoginPage";
 
 
 const Stack = createNativeStackNavigator();
@@ -43,25 +43,11 @@ const LnadingPageMain = ({navigation})=>{
     )
 }
 
-const LandingPage =() =>{
-    return (
-        <Stack.Navigator
-            initialRouteName="Landing"
-            screenOptions={{
-            }}
-        >
-            <Stack.Screen name="Landing" component={LnadingPageMain}/>
-            <Stack.Screen name="SignUp" component={SignUpPage} options={{
-                title:"Create Account"
-            }}/>
-            <Stack.Screen name="Login" component={LoginPage}/>
-        </Stack.Navigator>
-    )
-}
 
 const styles = StyleSheet.create({
     wrapper:{
         flex:1,
+        paddingTop:40
     },
     topBox:{
         flex:1.5,
@@ -87,4 +73,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LandingPage;
+export default LnadingPageMain;
