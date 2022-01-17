@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, SafeAreaView, Platform, Image, Button, Touchabl
 
 const SignUpPage = ({navigation}) =>{
 
-
     return (
         <SafeAreaView style={styles.wrapper}>
             <View style={styles.topBox}>

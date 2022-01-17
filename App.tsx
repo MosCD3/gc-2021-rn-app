@@ -24,11 +24,14 @@ export default function App() {
             screenOptions={{
               headerShown:false
             }}>
+            {/* Logged out pages */}
             <MainStack.Screen name="Landing" component={LnadingPageMain}/>
             <MainStack.Screen name="SignUp" component={SignUpPage} options={{
                 title:"Create Account"
             }}/>
             <MainStack.Screen name="Login" component={LoginPage}/>
+
+            {/* Logged in pages */}
             <MainStack.Screen name="AfterLogin" component={AfterLoginPage}/>
         </MainStack.Navigator>
     </NavigationContainer>

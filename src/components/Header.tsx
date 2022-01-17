@@ -1,24 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView, Platform } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, Platform, TouchableOpacity } from "react-native";
 
 
-const PageHeader = ()=> {
+const PageHeader = (props)=> {
+    const { children } = props;
     return (
-        <SafeAreaView style = {styles.wrapper}>
-            <Text style = {styles.textStyle}>Header displayed here</Text>
-        </SafeAreaView>
+        <View style = {styles.wrapper}>
+            {children}
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     wrapper:{
         backgroundColor: "#0a4a4b",
-        padding:10,
-        paddingTop: Platform.OS === 'android' ? 30 : 20,
+        padding:20,
     },
     textStyle: {
         color:"#fff",
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight:'bold'
     }
 })
 
