@@ -20,14 +20,14 @@ const LoginPage = ({ route, navigation }) => {
   const [status, setStatus] = useState("");
 
   async function doLogin() {
-    if (username.length <= 0) {
-      Alert.alert("Please enter a username");
-      return;
-    }
-    if (password.length <= 0) {
-      Alert.alert("Please enter a password");
-      return;
-    }
+    // if (username.length <= 0) {
+    //   Alert.alert("Please enter a username");
+    //   return;
+    // }
+    // if (password.length <= 0) {
+    //   Alert.alert("Please enter a password");
+    //   return;
+    // }
 
     setStatus("Authenticating ..");
     // const callback = (message) => {

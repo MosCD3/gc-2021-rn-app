@@ -32,6 +32,7 @@ export async function signUpPr(username, password): Promise<any> {
 }
 
 export async function signInAsync(username, password) {
+  return "SUCCESS";
   await sleep(2000);
   if (username === USERNAME && password === PASS) {
     return "SUCCESS";
